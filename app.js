@@ -15,6 +15,8 @@ const db = require('./config/database');
 // Load routes
 const users = require('./routes/users');
 
+const delivery = require('./routes/delivery');
+
 // Passport Config
 require('./config/passport')(passport);
 
@@ -79,12 +81,26 @@ app.get('/about', (req, res) => {
 });
 
 
+
+app.get('/delivery', (req, res) => {
+  res.render('delivery');
+});
+
+app.get('/courier', (req, res) => {
+  res.render('courier');
+});
+
+app.get('/deliveryDT', (req, res) => {
+  res.render('deliveryDT');
+});
+
 // Use routes
 app.use('/users', users);
 
+app.use('/delivery', delivery);
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 2000;
 
 app.listen(port, () =>{
   console.log(`Server started on port ${port}`);
