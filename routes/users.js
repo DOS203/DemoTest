@@ -274,7 +274,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'easyg3044@gmail.com',
-          pass: 'Rvm150367'
+          pass: 'Easygo123'
         }
       });
       const mailOptions = {
