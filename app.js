@@ -100,7 +100,7 @@ app.use('/users', users);
 app.use('/delivery', delivery);
 
 
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () =>{
   console.log(`Server started on port ${port}`);
