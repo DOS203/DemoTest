@@ -99,6 +99,8 @@ app.use('/users', users);
 
 app.use('/delivery', delivery);
 
+//Load 404 page (if page is not exist!)
+app.use((req ,res) => res.render('not_found'));
 
 const port = process.env.PORT || 5000;
 
